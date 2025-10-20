@@ -10,12 +10,10 @@ function App() {
   const dispatch = useDispatch();
   return (
     <div>
-      <p>Local state management</p>
+      <p>My Users</p>
+      
      <ChildComponent/>
-     
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>
+    
     </div>
   );
 }

@@ -7,7 +7,7 @@ export const store = configureStore({
   reducer:{
     // todo: we will add content in here
     counter:counterReducer,
-    users:usersReducer 
+    users:usersReducer
   }
 
 })
