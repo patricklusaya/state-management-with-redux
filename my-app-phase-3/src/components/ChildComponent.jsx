@@ -16,14 +16,29 @@ export default function ChildComponent() {
   dispatch(fetchUsers())
     
   }, [])
+
+  if (loading) {
+  return <p>Loading Users...</p>;
+}
+
+if (error) {
+  return <p>{error}</p>;
+}
+
+if (!users || users.length === 0) {
+  return <p>No users found</p>;
+}
+
   
 
   return (
     <div>
       <p>Users</p>
+       <ul>
+        {users.map((user) => (
+          <li key={user.id}>{user.login}</li>
+        ))}
+      </ul>
     </div>
   )
-
-
-  
 }
